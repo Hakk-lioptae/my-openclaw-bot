@@ -1,0 +1,16 @@
+{
+  "entries": {
+    "/home/lioptae/.openclaw/openclaw.json": {
+      "lastKnownGood": {
+        "hash": "4a972e02907a860acf1305a63b498e0be7343f7bb81059e6d9af278a16d49c5f",
+        "bytes": 2321,
+        "mtimeMs": 1774423813352.8887,
+        "ctimeMs": 1774423813368.8887,
+        "hasMeta": true,
+        "gatewayMode": "local",
+        "observedAt": "2026-03-26T03:47:42.766Z"
+      },
+      "lastObservedSuspiciousSignature": null
+    }
+  }
+}

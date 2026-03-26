@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-25T07:29:55.801Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-25T07:24:09.022Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/auto",
+        "fallbacks": [
+          "openrouter/moonshotai/kimi-k2.5"
+        ]
+      },
+      "models": {
+        "openrouter/google/gemini-3.1-flash-lite-preview": {
+          "alias": "Gemini Flash"
+        },
+        "openrouter/minimax/minimax-m2.5": {
+          "alias": "MiniMax"
+        },
+        "openrouter/moonshotai/kimi-k2.5": {
+          "alias": "Kimi"
+        },
+        "openrouter/deepseek/deepseek-v3.2": {
+          "alias": "DeepSeek"
+        },
+        "openrouter/auto": {
+          "alias": "OpenRouter"
+        }
+      },
+      "workspace": "/home/lioptae/.openclaw/workspace",
+      "memorySearch": {
+        "enabled": false
+      }
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "provider": "gemini"
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8718151129:AAF29TjxfNxqyhgNVmHSrR8i7QkfCYZhWw0",
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "ba1e95c5a9ceda4328e41daa3103bfe29815999ffa18b52d"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-24T05:24:59.997Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-24T05:24:59.993Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/google/gemini-3.1-flash-lite-preview",
+        "fallbacks": [
+          "openrouter/moonshotai/kimi-k2.5"
+        ]
+      },
+      "models": {
+        "openrouter/google/gemini-3.1-flash-lite-preview": {
+          "alias": "Gemini Flash"
+        },
+        "openrouter/minimax/minimax-m2.5": {
+          "alias": "MiniMax"
+        },
+        "openrouter/moonshotai/kimi-k2.5": {
+          "alias": "Kimi"
+        },
+        "openrouter/deepseek/deepseek-v3.2": {
+          "alias": "DeepSeek"
+        }
+      },
+      "workspace": "/home/lioptae/.openclaw/workspace"
+    }
+  },
+  "tools": {
+    "profile": "coding"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "ba1e95c5a9ceda4328e41daa3103bfe29815999ffa18b52d"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+
+"channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "8772143861:AAHs_0j9JE1mIPKfOTbK74sprP31f6HCYE0",
+      "dmPolicy": "pairing"
+    }
+  }
+
+}
